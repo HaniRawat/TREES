@@ -57,3 +57,32 @@ void Solution::connect(TreeLinkNode* A) {
     }
 
 }
+
+//leetcode solution
+class Solution {
+public:
+
+Node* connect(Node* root) {
+    Node* head = root;
+
+    for(; head; head = head->left) {
+        for(Node* curr = head; curr; curr = curr->next) {
+            // If the left and right of the current node exist
+            if(curr->left) {
+                // Link the next of the left node
+                curr->left->next = curr->right;
+
+                // If the next of the current node exist
+                if(curr->next) {
+                    curr->right->next = curr->next->left;
+                }
+            }
+            else {
+                break;
+            }
+        }
+    }
+
+    return root;
+}
+};
