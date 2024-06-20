@@ -100,17 +100,17 @@ class Solution{
 public:
     int solve(Node* root, int &kit){
         if(!root)
-            return 1;
+            return 1; //want vaccine
             
         int left = solve(root->left,kit);
         int right = solve(root->right,kit);
         
         if(left == 0 || right == 0){
             kit++;
-            return 2;
+            return 2; //parent given vaccine
         }
         else if(left == 2 || right == 2){
-            return 1;
+            return 1; //vaccine mil gyi parent se
         }
         else
             return 0;
