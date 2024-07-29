@@ -22,7 +22,7 @@ How to Use
 
 Clone this repository to your local machine:
 
-1.git clone <repository-url>
+1.git clone <[repository-url](https://github.com/HaniRawat/TREES)>
 
 2.Navigate to the directory containing the solution you're interested in. 3.Open the file in your preferred code editor to view the solution. 4.Run the solution using an appropriate compiler or interpreter for the chosen programming language.
 
